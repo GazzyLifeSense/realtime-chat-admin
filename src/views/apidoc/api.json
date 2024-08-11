@@ -1,0 +1,320 @@
+[
+    {
+        "class": "用户",
+        "method": "POST",
+        "path": "/login",
+        "desc": "用户登录"
+    },
+    {
+        "class": "用户",
+        "method": "POST",
+        "path": "/adminLogin",
+        "desc": "管理员登录"
+    },
+    {
+        "class": "用户",
+        "method": "POST",
+        "path": "/register",
+        "desc": "用户注册"
+    },
+    {
+        "class": "用户",
+        "method": "POST",
+        "path": "/verifyAndGetUser",
+        "desc": "使用token获取用户信息"
+    },
+    {
+        "class": "用户",
+        "method": "POST",
+        "path": "/updateNickname",
+        "desc": "修改用户昵称"
+    },
+    {
+        "class": "用户",
+        "method": "POST",
+        "path": "/updateIntroduction",
+        "desc": "修改个人介绍"
+    },
+    {
+        "class": "用户",
+        "method": "POST",
+        "path": "/updatePassword",
+        "desc": "修改密码"
+    },
+    {
+        "class": "好友",
+        "method": "POST",
+        "path": "/getFriends",
+        "desc": "获取好友列表"
+    },
+    {
+        "class": "好友",
+        "method": "POST",
+        "path": "/deleteFriend",
+        "desc": "删除好友"
+    },
+    {
+        "class": "消息",
+        "method": "POST",
+        "path": "/getPrivateMsgs",
+        "desc": "获取私聊记录"
+    },
+    {
+        "class": "消息",
+        "method": "POST",
+        "path": "/getGroupMsgs",
+        "desc": "获取群聊记录"
+    },
+    {
+        "class": "消息",
+        "method": "POST",
+        "path": "/sendPic",
+        "desc": "发送图片"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/createGroup",
+        "desc": "创建群组"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/getGroups",
+        "desc": "获取群组列表"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/getRecommandGroups",
+        "desc": "获取推荐群组列表"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/getMembers",
+        "desc": "获取群员列表"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/removeMember",
+        "desc": "移除成员"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/exitGroup",
+        "desc": "退出群组"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/dismissGroup",
+        "desc": "解散群组"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/getGroupsByName",
+        "desc": "根据群名称搜索群组"
+    },
+    {
+        "class": "群组",
+        "method": "POST",
+        "path": "/updateGroupDescription",
+        "desc": "修改群组简介"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/hasApplies",
+        "desc": "获取申请列表"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/getFriendApplies",
+        "desc": "获取好友申请列表"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/getGroupApplies",
+        "desc": "获取群组申请列表"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/rejectFriendApply",
+        "desc": "拒绝好友申请"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/rejectGroupApply",
+        "desc": "拒绝群组申请"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/applyFriend",
+        "desc": "申请添加好友"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/applyGroup",
+        "desc": "申请添加群组"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/acceptFriendApply",
+        "desc": "接受好友申请"
+    },
+    {
+        "class": "申请",
+        "method": "POST",
+        "path": "/acceptGroupApply",
+        "desc": "接受群组申请"
+    },
+    {
+        "class": "上传",
+        "method": "POST",
+        "path": "/uploadAvatar",
+        "desc": "上传用户头像"
+    },
+    {
+        "class": "上传",
+        "method": "POST",
+        "path": "/uploadGroupAvatar",
+        "desc": "上传群组头像"
+    },
+    {
+        "class": "上传",
+        "method": "POST",
+        "path": "/uploadGroupBanner",
+        "desc": "上传群组横幅"
+    },
+    {
+        "class": "统计",
+        "method": "GET",
+        "path": "/getOnlineUserCount",
+        "desc": "获取在线用户数"
+    },
+    {
+        "class": "统计",
+        "method": "GET",
+        "path": "/getOnlineCount",
+        "desc": "获取在线终端数"
+    },
+    {
+        "class": "统计",
+        "method": "GET",
+        "path": "/getUserCount",
+        "desc": "获取用户数量"
+    },
+    {
+        "class": "统计",
+        "method": "GET",
+        "path": "/getGroupCount",
+        "desc": "获取群组数量"
+    },
+    {
+        "class": "统计",
+        "method": "GET",
+        "path": "/getMessageCount",
+        "desc": "获取消息数量"
+    },
+    {
+        "class": "统计",
+        "method": "GET",
+        "path": "/getTopActiveGroup",
+        "desc": "获取最活跃群组"
+    },
+    {
+        "class": "统计",
+        "method": "GET",
+        "path": "/getUserLocationPercent",
+        "desc": "获取用户归属地占比"
+    },
+    {
+        "class": "管理员",
+        "method": "GET",
+        "path": "/createTestUsers",
+        "desc": "批量创建用户"
+    },
+    {
+        "class": "管理员",
+        "method": "GET",
+        "path": "/getUserList",
+        "desc": "获取用户列表"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/updateNicknameByAdmin",
+        "desc": "修改用户昵称"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/banByAdmin",
+        "desc": "封禁或解封用户"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/banManyByAdmin",
+        "desc": "批量封禁或解封用户"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/removeUser",
+        "desc": "删除用户"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/removeManyUser",
+        "desc": "批量删除用户"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/createTestGroups",
+        "desc": "批量创建群组"
+    },
+    {
+        "class": "管理员",
+        "method": "GET",
+        "path": "/getGroupList",
+        "desc": "获取群组列表"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/recommandByAdmin",
+        "desc": "修改群组推荐状态"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/updateGroupnameByAdmin",
+        "desc": "修改群组昵称"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/dismissByAdmin",
+        "desc": "解散群组"
+    },
+    {
+        "class": "管理员",
+        "method": "POST",
+        "path": "/dismissManyByAdmin",
+        "desc": "批量解散群组"
+    }
+]
