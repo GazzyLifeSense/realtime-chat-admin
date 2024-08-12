@@ -85,7 +85,7 @@
     },
     {
         "class": "群组",
-        "method": "POST",
+        "method": "GET",
         "path": "/getrecommendGroups",
         "desc": "获取推荐群组列表"
     },
