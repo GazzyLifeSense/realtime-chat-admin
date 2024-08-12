@@ -1,12 +1,21 @@
 import axios from 'axios'
 import NProgress from './nprogress';
-import { ElMessage, ElNotification } from 'element-plus';
+import { ElMessage } from 'element-plus';
+import { GlobalStore } from '@/stores';
 
 const service = axios.create()
 // request拦截器设置
 service.interceptors.request.use(
-    (config) => {
+    (config: any) => {
       // 开启进度条
+      const globalStore = GlobalStore()
+
+      // 预览账号功能限制
+      if(globalStore.token != 'admin' && config.method == 'post') {
+        ElMessage.error({ message: '预览账号不支持发起POST请求~'})
+        return false
+      }
+
       NProgress.start();
       return config
     },

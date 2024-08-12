@@ -1,14 +1,14 @@
 <template>
 	<el-form ref="loginFormRef" :model="loginForm" :rules="loginRules" size="large">
 		<el-form-item prop="username">
-			<el-input v-model="loginForm.username" placeholder="用户名：admin">
+			<el-input v-model="loginForm.username" placeholder="预览用户名：test">
 				<template #prefix>
 					<el-icon class="el-input__icon"><user /></el-icon>
 				</template>
 			</el-input>
 		</el-form-item>
 		<el-form-item prop="password">
-			<el-input type="password" v-model="loginForm.password" placeholder="密码：admin" show-password autocomplete="new-password">
+			<el-input type="password" v-model="loginForm.password" placeholder="密码：test" show-password autocomplete="new-password">
 				<template #prefix>
 					<el-icon class="el-input__icon"><lock /></el-icon>
 				</template>
@@ -50,12 +50,27 @@ const login = (formEl: FormInstance | undefined) => {
 		if (!valid) return;
 		loading.value = true;
 		try {
-			if(loginForm.username == 'admin' && loginForm.password == 'admin'){
+			if(loginForm.username == 'jormun' && loginForm.password == 'jormun'){
 			
 				// 1.添加动态路由
 				await addDynamicRouter();
 
 				globalStore.setToken('admin');
+
+				// 2.跳转到首页
+				router.push('/layout');
+				ElNotification({
+					title: getTimeState(),
+					message: "欢迎登录 RealtimeChat-Admin",
+					type: "success",
+					duration: 3000
+				});
+			}else if(loginForm.username == 'test' && loginForm.password == 'test'){
+			
+				// 1.添加动态路由
+				await addDynamicRouter();
+
+				globalStore.setToken('test');
 
 				// 2.跳转到首页
 				router.push('/layout');
