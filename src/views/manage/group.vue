@@ -18,9 +18,9 @@
 	</div>
 	<a-table :dataSource="groupListft" :columns="columns" :row-selection="rowSelection" :rowKey="(record:any) => record._id">
     <template #bodyCell="{ record,column }">
-      <template v-if="column.dataIndex === 'isRecommanded'">
-        <el-button type="success" v-if="record.isRecommanded" @click="recommand(record,false)">是</el-button>
-        <el-button type="info" v-if="!record.isRecommanded" @click="recommand(record,true)">否</el-button>
+      <template v-if="column.dataIndex === 'isRecommended'">
+        <el-button type="success" v-if="record.isRecommended" @click="recommend(record,false)">是</el-button>
+        <el-button type="info" v-if="!record.isRecommended" @click="recommend(record,true)">否</el-button>
       </template>
 
       <template v-if="column.dataIndex === 'members'">
@@ -82,7 +82,7 @@ let columns = [
   },
   {
     title: '是否推荐',
-    dataIndex: 'isRecommanded',
+    dataIndex: 'isRecommended',
     width: 105,
     align: 'center',
     filters: [
@@ -95,7 +95,7 @@ let columns = [
         value: false
       },
     ],
-    onFilter: (value, record)=> record.isRecommanded == value
+    onFilter: (value, record)=> record.isRecommended == value
   },
   {
     title: '类型',
@@ -207,8 +207,8 @@ function updateGroupNameByAdmin(record:any) {
 }
 
 // 推荐群组
-function recommand(record, status) {
-	axios.post('/api/recommandByAdmin',{groupId: record._id, isRecommanded: status}).then((resp)=>{
+function recommend(record, status) {
+	axios.post('/api/recommendByAdmin',{groupId: record._id, isRecommended: status}).then((resp)=>{
 		if(resp?.code === 200){
 			ElMessage.success(resp.msg)
 			getGroupList()

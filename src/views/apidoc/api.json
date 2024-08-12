@@ -86,7 +86,7 @@
     {
         "class": "群组",
         "method": "POST",
-        "path": "/getRecommandGroups",
+        "path": "/getrecommendGroups",
         "desc": "获取推荐群组列表"
     },
     {
@@ -296,7 +296,7 @@
     {
         "class": "管理员",
         "method": "POST",
-        "path": "/recommandByAdmin",
+        "path": "/recommendByAdmin",
         "desc": "修改群组推荐状态"
     },
     {
